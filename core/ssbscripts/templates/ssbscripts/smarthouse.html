@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>smarthouse share</title>
+</head>
+<body>
+    <h1>Расшаривание</h1>
+    <form>
+        <table>
+        {% csrf_token %}
+        {{ form.as_table }}
+        </table>
+    </form>
+    <form method="post" action="/">
+        {% csrf_token %}
+        <input type="submit" value="Вернуться обратно" >
+    </form>
+</body>
+</html>
